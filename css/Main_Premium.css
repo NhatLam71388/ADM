@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  background-image: url("https://zingmp3.vn/vip/images/background/home.png");
+  color: aliceblue;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+h1 {
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 6vw;
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 20500ms linear infinite 2000ms;
+}
+
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+.info {
+  opacity: 0;
+  animation: fadeIn 2s forwards 3s;
+  font-size: 2vw;
+  color: gray;
+  width: 50vw;
+  margin-top: 30px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.row {
+  margin-top: 100px;
+}
+
+.card_ {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 20px 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.badge {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #3b0a63;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  vertical-align: middle;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: start;
+}
+
+p {
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: start;
+}
+
+.subscribe-btn {
+  background-color: #a959ff;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.benefits {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.benefits h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.benefits .material-icons {
+  color: #a959ff;
+  margin-right: 10px;
+}
+
+.plus {
+  background: #ad5389; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.premium {
+  background: #ba8b02; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #181818,
+    #ba8b02
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #181818,
+    #ba8b02
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

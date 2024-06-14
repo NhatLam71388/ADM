@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Main_Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>    
+                <button type="button" class="toggle-btn" style="padding-left: 20px; padding-right: 10px;" onclick="login()">Đăng nhập</button>
+                <button type="button" class="toggle-btn" style="padding-left: 40px;" onclick="register()">Đăng ký</button>
+            </div>
+            <div class="social-icon">
+                <i class="fa-brands fa-google fa-xl" style="cursor: pointer;"></i>
+                <i class="fa-brands fa-facebook fa-xl" style="cursor: pointer;"></i>
+                <i class="fa-brands fa-github fa-xl" style="cursor: pointer;"></i>
+            </div>
+            <form id="login" action="" class="input-group" onsubmit="return KiemTraLogin()">
+                <input type="text" class="input-field" placeholder="Tên người dùng" required>
+                <input type="password"  id="login-password" class="input-field" placeholder="Mật khẩu" required>
+                <div id="login-password-error" class="error-message"></div>
+                <input type="checkbox" class="check-box"><span>Nhớ mật khẩu</span>
+                <button type="submit" class="submit-btn" >Đăng nhập</button>
+            </form>
+            <form id="register" action="" class="input-group" onsubmit="return KiemTraRegister()">
+                <input type="text"  class="input-field" placeholder="Tên người dùng" required>
+                <input type="email" id="register-email" class="input-field" placeholder="Email" required>
+                <div id="register-email-error" class="error-message"></div>
+                <input type="password" id="register-password" class="input-field" placeholder="Mật khẩu" required>
+                <div id="register-password-error" class="error-message"></div>
+                <input type="checkbox" class="check-box"><span>Tôi đồng ý với điều khoản và điều kiện trên</span>
+                <button type="submit" class="submit-btn">Đăng kí</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <script>
+            var x=document.getElementById("login");
+            var y=document.getElementById("register");
+            var z=document.getElementById("btn");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+
+
+            function KiemTraLogin() {
+                var password = document.getElementById("login-password").value;
+                var passwordError = document.getElementById("login-password-error");
+
+                passwordError.textContent = "";
+
+                var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{11,}$/;
+                if (password.length <= 10 || !passwordPattern.test(password)) {
+                    passwordError.textContent = "Password phải trên 10 ký tự bao gồm cả chữ cái và số";
+                    return false;
+                }
+                window.location.href = "./Hompage.html";
+                return false;
+            }
+        </script>
+    </div>
+</body>
+</html>
