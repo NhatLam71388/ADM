@@ -1,70 +1,69 @@
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
+@keyframes move {  /* Định nghĩa animation với tên 'move' */
+    100% {  /* Tại 100% của animation */
+        transform: translate3d(0, 0, 1px) rotate(360deg);  /* Di chuyển 3D và xoay 360 độ */
     }
 }
 
-*, *:after, *:before {
-	box-sizing: border-box;
+*, *:after, *:before {  /* Áp dụng cho tất cả các phần tử và các pseudo-elements */
+	box-sizing: border-box;  /* Đặt mô hình box-sizing là border-box */
 }
 
 body {
-	font-family: "Lexend", sans-serif;
-	line-height: 1.5;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	color: #7d3636;
+	font-family: "Lexend", sans-serif;  /* Thiết lập font chữ cho toàn bộ trang */
+	line-height: 1.5;  /* Đặt chiều cao dòng là 1.5 lần chiều cao chữ */
+	min-height: 100vh;  /* Chiều cao tối thiểu của body là 100% chiều cao của cửa sổ */
+	display: flex;  /* Sử dụng Flexbox cho layout */
+	justify-content: center;  /* Căn giữa nội dung theo chiều ngang */
+	color: #7d3636;  /* Màu chữ */
 }
 
-/* For Webkit browsers (Chrome, Safari, Opera) */
+/* Thiết lập cho trình duyệt Webkit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
-	width: 6px; /* Width of the scrollbar */
-	background-color: #090977e1
-  }
-
-  ::-webkit-scrollbar-thumb {
-	background-color: #1b0c19; /* Color of the scrollbar thumb */
-	border-radius: 10px; /* Rounded corners */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-	background-color: #EC4646; /* Color of the scrollbar thumb when hovered */
-  }
-
-  /* For Firefox */
-
-.background {
-    position: sticky;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 22%, rgba(9,9,121,1) 100%);
-    overflow: hidden;
+	width: 6px;  /* Chiều rộng của thanh cuộn */
+	background-color: #090977e1;  /* Màu nền của thanh cuộn */
 }
 
-.background > span {
-    width: 20vmin;
-    height: 20vmin;
-    border-radius: 20vmin;
-    backface-visibility: hidden;
-    position: absolute;
-    animation: move;
-    animation-duration: 46;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+::-webkit-scrollbar-thumb {
+	background-color: #1b0c19;  /* Màu của thanh cuộn khi kéo */
+	border-radius: 10px;  /* Góc tròn của thanh cuộn */
 }
 
+::-webkit-scrollbar-thumb:hover {
+	background-color: #EC4646;  /* Màu của thanh cuộn khi di chuột qua */
+}
 
-.background > span:nth-child(0) {
-    color: #3100e0;
-    top: 81%;
-    left: 64%;
-    animation-duration: 31s;
-    animation-delay: -3s;
-    transform-origin: 14vw -4vh;
-    box-shadow: 40vmin 0 5.2844021206679335vmin currentColor;
+/* Thiết lập cho Firefox */
+
+.background {  /* Định nghĩa lớp background */
+    position: sticky;  /* Vị trí dính vào viewport khi cuộn */
+    width: 100vw;  /* Chiều rộng 100% của viewport */
+    top: 0;  /* Căn trên */
+    left: 0;  /* Căn trái */
+    background: rgb(2,0,36);  /* Màu nền RGB */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 22%, rgba(9,9,121,1) 100%);  /* Gradient nền */
+    overflow: hidden;  /* Ẩn phần tràn */
+}
+
+.background > span {  /* Áp dụng cho tất cả các span con trong .background */
+    width: 20vmin;  /* Chiều rộng 20% của chiều ngắn hơn viewport */
+    height: 20vmin;  /* Chiều cao 20% của chiều ngắn hơn viewport */
+    border-radius: 20vmin;  /* Góc tròn với bán kính 20% của chiều ngắn hơn viewport */
+    backface-visibility: hidden;  /* Ẩn mặt sau của phần tử */
+    position: absolute;  /* Vị trí tuyệt đối */
+    animation: move;  /* Áp dụng animation 'move' */
+    animation-duration: 46s;  /* Thời gian của animation là 46 giây */
+    animation-timing-function: linear;  /* Animation tuyến tính */
+    animation-iteration-count: infinite;  /* Lặp vô hạn */
+}
+
+.background > span:nth-child(0) {  /* Thiết lập cho span con đầu tiên */
+    color: #3100e0;  /* Màu của span */
+    top: 81%;  /* Vị trí cách trên 81% */
+    left: 64%;  /* Vị trí cách trái 64% */
+    animation-duration: 31s;  /* Thời gian của animation là 31 giây */
+    animation-delay: -3s;  /* Độ trễ của animation là -3 giây */
+    transform-origin: 14vw -4vh;  /* Điểm gốc của transform */
+    box-shadow: 40vmin 0 5.2844021206679335vmin currentColor;  /* Đổ bóng cho span */
 }
 .background > span:nth-child(1) {
     color: #3100e0;
