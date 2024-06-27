@@ -175,9 +175,11 @@
   position: absolute; /* Định vị tuyệt đối */
   top: 5px; /* Khoảng cách từ trên xuống */
   right: 15px; /* Khoảng cách từ phải sang */
-  font-size: 1.2rem; /* Kích thước chữ */
+  font-size: 2.2rem; /* Kích thước chữ */
   color: #d8dde0; /* Màu chữ */
 }
+
+
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
   transform: translateX(0); /* Di chuyển vị trí theo trục X */
@@ -503,13 +505,7 @@
   }
 
   .form-input {
-    width: 80vw; /* Chiều rộng 80% viewport width khi màn hình nhỏ hơn 767px */
-    height: 45px; /* Chiều cao khi màn hình nhỏ hơn 767px */
-  }
-
-  .form .fa-search {
-    top: 15px; /* Vị trí từ trên xuống khi màn hình nhỏ hơn 767px */
-    left: 15px; /* Vị trí từ trái sang khi màn hình nhỏ hơn 767px */
+    width: 40vw; /* Chiều rộng 80% viewport width khi màn hình nhỏ hơn 767px */
   }
 }
 
@@ -549,4 +545,8 @@
     width: 60px; /* Chiều rộng khi màn hình nhỏ hơn 767px */
     height: 60px; /* Chiều cao khi màn hình nhỏ hơn 767px */
   }
+}
+
+.hidden:hover .logo{
+  font-weight: 500;
 }
